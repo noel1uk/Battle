@@ -9,10 +9,7 @@ feature "name input" do
   end
 
   scenario "player 1 and 2's names are displayed" do
-    visit('/')
-    fill_in 'player1', with: 'July'
-    fill_in 'player2', with: 'Jill'
-    click_button 'Submit'
-    expect(page).to have_content("Welcome July and Jill")
+    sign_in_and_play
+    expect(page).to have_content("Welcome July Vs Jill")
   end
 end

@@ -5,6 +5,7 @@ feature "name input" do
     visit('/')
     expect(page).to have_field(:Player1)
     expect(page).to have_selector("form")
+    p page
   end
 end
 
